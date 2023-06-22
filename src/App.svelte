@@ -16,6 +16,7 @@
 </script>
 
 <main>
+	<h2>QUOTES: {quotes.length}</h2>
 	<h1>Random quote of the day:</h1>
 	<h2>{quotes[random]}</h2>
 	<button class="refresh" id="refresh" on:click={randomQuote}>Change</button>
@@ -44,6 +45,7 @@
 		max-width: 450px; 
 		color: white;
 	}
+
 
 	.refresh {
 		border-radius: 10px;
