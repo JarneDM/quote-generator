@@ -31,8 +31,7 @@ const app = new App({
 			`“I have a dream that one day this nation will rise up and live out the true meaning of its creed: ‘We hold these truths to be self-evident, that all men are created equal.'” — Martin Luther King Jr.`,
 			`“The unexamined life is not worth living.” — Socrates`,
 			`“To be or not to be, that is the question.” — William Shakespeare`,
-			`“The only thing necessary for the triumph of evil is for good men to do nothing.” — Edmund Burke`,
-			``
+			`“The only thing necessary for the triumph of evil is for good men to do nothing.” — Edmund Burke`
 		]
 	}
 });
