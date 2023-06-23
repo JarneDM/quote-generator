@@ -1,16 +1,13 @@
 <script>
 	export let quotes;
+
 	let random;
 	const randomQuote = ()=> {
-		random = Math.floor(Math.random() * quotes.length);
+		random = Math.floor(Math.random() * quotes.length); 
 	}
 
-	if (random == undefined){
+	if (random === undefined){
 		randomQuote();
-	}
-
-	if (random > 0 && quotes[random] === quotes[random - 1]) {
-  		randomQuote();
 	}
 
 </script>
