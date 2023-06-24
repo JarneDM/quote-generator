@@ -1,21 +1,32 @@
 <script>
 	export let quotes;
+let previousRandom;
+let currentRandom;
 
-	let random;
-	const randomQuote = ()=> {
-		random = Math.floor(Math.random() * quotes.length); 
-	}
+const randomQuote = () => {
+  currentRandom = Math.floor(Math.random() * quotes.length);
+  // console.log(currentRandom);
+  if (currentRandom === previousRandom) {
+    // If the current random number is the same as the previous one,
+    // generate a new random number until they are different.
+    while (currentRandom === previousRandom) {
+      currentRandom = Math.floor(Math.random() * quotes.length);
+    }
+  }
+  previousRandom = currentRandom;
+  // console.log(quotes[currentRandom]);
+};
 
-	if (random === undefined){
-		randomQuote();
-	}
+// Call the randomQuote function to generate the initial quote
+randomQuote();
+
 
 </script>
 
 <main>
 	<h2>QUOTES: {quotes.length}</h2>
 	<h1>Random quote of the day:</h1>
-	<h2>{quotes[random]}</h2>
+	<h2>{quotes[currentRandom]}</h2>
 	<button class="refresh" id="refresh" on:click={randomQuote}>Change</button>
 </main>
 
